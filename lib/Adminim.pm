@@ -9,11 +9,11 @@ use base 'Mojolicious';
 sub startup {
     my $self = shift;
 
-    # Documentation browser under "/perldoc" (this plugin requires Perl 5.10)
-#    $self->plugin('pod_renderer');
+    my $config = $self->plugin('json_config');
 
     # Routes
     my $r = $self->routes;
+    $r->namespace('FastNotes::Controller');
 
     # Normal route to controller
     $r->route('/welcome')->to('example#welcome', id => 1);

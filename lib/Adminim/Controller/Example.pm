@@ -1,4 +1,4 @@
-package Adminim::Example;
+package Adminim::Controller::Example;
 
 use strict;
 use warnings;
