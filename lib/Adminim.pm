@@ -9,11 +9,18 @@ use base 'Mojolicious';
 sub startup {
     my $self = shift;
 
-    my $config = $self->plugin('json_config');
+    # get config
+    my $config = $self->plugin('json_config', { 
+            file        => $self->home->rel_file('etc/adminim.conf'), 
+            stash_key   => 'conf'
+        } );
+
+    # change a secret
+    $self->secret( $config->{secret} );
 
     # Routes
     my $r = $self->routes;
-    $r->namespace('FastNotes::Controller');
+    $r->namespace('Adminim::Controller');
 
     # Normal route to controller
     $r->route('/welcome')->to('example#welcome', id => 1);
