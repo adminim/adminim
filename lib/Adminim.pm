@@ -15,8 +15,13 @@ sub startup {
             stash_key   => 'conf'
         } );
 
-    # change a secret
+    $ENV{MOJO_HOME} ||= $config->{home_path};
+
     $self->secret( $config->{secret} );
+
+    # Plugins
+    $self->plugin( charset  => { charset => 'utf8' } );
+    $self->plugin( 'i18n' );
 
     # Routes
     my $r = $self->routes;
@@ -27,3 +32,4 @@ sub startup {
 }
 
 1;
+
