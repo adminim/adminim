@@ -1,3 +1,5 @@
 % layout 'default';
 
+<!-- TODO delete this code in future -->
+<h2>Page - <%= $page %></h2>    
 
