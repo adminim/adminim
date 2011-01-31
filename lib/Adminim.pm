@@ -29,7 +29,11 @@ sub startup {
     my $r = $self->routes;
     $r->namespace('Adminim::Controller');
 
-    # Normal route to controller
+    # Help
+    $r->route('/')          ->via('get')->to(controller => 'help', action => 'index')->name('index');
+    $r->route('/help')      ->via('get')->to(controller => 'help', action => 'index')->name('index');
+    $r->route('/help/:page')->via('get')->to(controller => 'help', action => 'index')->name('index');
+
     $r->route('/welcome')->to('example#welcome', id => 1);
 }
 

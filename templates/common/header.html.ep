@@ -1,0 +1,10 @@
+
+<div class="head" id="menu_buttons">
+    <!-- Settings button -->
+    <input type="radio" id="menu_btn_settings" name="radio" onclick="location.href='/settings'" />
+    <label title="<%= l 'Show settings page' %>" for="menu_btn_settings"><%= l 'Settings' %></label>
+
+    <!-- Help button -->
+    <input type="radio" id="menu_btn_help" name="radio" onclick="location.href='/help'" />
+    <label title="<%= l 'Show help page' %>" for="menu_btn_help"><%= l 'Help' %></label>
+</div>

@@ -1,0 +1,17 @@
+
+init();
+
+function init() {
+    // check menu
+    var check_menu = "<%== $menu %>";
+    $("#menu_btn_" + check_menu).attr('checked', 'checked');
+
+    // create buttons
+    $( "#menu_buttons" ).buttonset();
+
+    // move menu
+    var width = 0;
+    $("#menu_buttons label").each( function(){ width += $(this).width(); } );
+    $('.head').offset({left : parseInt(($(window).width() - width) / 2), top : 0 });
+}
+    
