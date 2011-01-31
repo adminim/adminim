@@ -1,2 +1,7 @@
 page not found === страница не найдена
 error === ошибка
+Show settings page === Отобразить страницу настроек
+Show help page === Отобразить справку
+Help === Помощь
+Settings === Настройки
+help page === справочник
