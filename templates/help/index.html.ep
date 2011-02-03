@@ -1,3 +1,105 @@
 % layout 'default';
 
-Help Page
+<script type="text/javascript">
+    $().ready(function(){
+         $('body').layout({ applyDefaultStyles: true });
+        });
+</script>
+
+<div class="ui-layout-west"></div>
+<div class="ui-layout-center">
+
+<div style="padding:30px;30px 0px 0px;">
+<h3>Help page structure:</h3>
+
+<h4>Files hierarchy:</h4>
+<hr />
+<pre>
+    template/
+        index.html.ep                           - current page
+        help/
+            pages/
+                en/
+                    main.html.ep                - index page for help for English interface (default)
+                    settings.html.ep
+                    settings/
+                        user.html.ep
+                        system.html.ep
+                    database_manager.html.ep
+                    file_manager.html.ep
+                ru/
+                    main.html.ep                - index page for help for Russian interface
+                    settings.html.ep
+                    settings/
+                        user.html.ep
+                        system.html.ep
+                    database_manager.html.ep
+                    file_manager.html.ep
+
+
+    ------------------------------
+    In a future:
+    
+    
+    +
+    plugins/
+        plugin_name/
+            template/
+                help/
+                    en/
+                        .......
+
+</pre>
+<hr />
+
+<h4>File content:</h4>
+
+<b>help/pages/en/settings.html.ep</b><br />
+<br />
+<pre>
+Settings                (Header)
+Bla-bla-bla....
+Bla-bla-bla....
+.....
+Settings type:
+    User Settings       (link on the help/settings/user)
+    System settings     (link on the help/settings/user)
+
+Bla-bla-bla....
+Bla-bla-bla....
+.....
+</pre>
+
+<hr />
+
+<h4>Viewer:</h4>
+<pre>
+---------------------------------
+|           |                   |
+|  Helps    |  Help content     |
+|  |-DB     |  .............    |
+|  |-Set.   |  .............    |
+|   |-User  |  .............    |
+|   |-Sys   |                   |
+|  |-File   |                   |
+|           |                   |
+---------------------------------
+</pre>
+
+<hr />
+
+<h4>Create mechanism</h4>
+
+<b>Treeview</b>
+<pre>
+    - name  - header name in the template
+    - depth - depth in the file hierarchy
+</pre>
+
+<b>Content</b>
+<pre>
+    - it's file content
+</pre>
+</div>
+
+<div>

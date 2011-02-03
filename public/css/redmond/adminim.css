@@ -1,0 +1,13 @@
+
+.ui-layout-pane {
+    border: 1px solid #C5DBEC !important;
+}
+
+.ui-layout-resizer {
+    background: repeat-x scroll 50% 50% #DFEFFC !important;
+}
+
+.ui-layout-toggler {
+    background: repeat-x scroll 50% 50% #2E6EC0 !important;
+}
+
