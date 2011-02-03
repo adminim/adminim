@@ -37,6 +37,8 @@ sub startup {
     # settings
     $r->route('/settings')->via('get')->to('settings#index')->name('settings_index');
 
+    # dbmanager  
+    $r->route('/dbm')->via('get')->to('d_b_manager#show')->name('d_b_manager_show');
 
     $r->route('/welcome')->to('example#welcome', id => 1);
 }

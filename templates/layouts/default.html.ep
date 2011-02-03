@@ -17,6 +17,7 @@
         <script type="text/javascript" src="/js/jquery-ui-1.8.9.custom.min.js"></script>
         <script type="text/javascript" src="/js/jquery.layout.min.js"></script>
         <script type="text/javascript" src="/js/jquery.jstree.js"></script>
+        <script type="text/javascript" src="/js/jquery.rest.js"></script>
         <script type="text/javascript" src="/js/adminim.js"></script>
         <script type="text/javascript">
             $().ready(function(){
