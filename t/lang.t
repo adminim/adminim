@@ -5,7 +5,6 @@ use warnings;
 
 use Test::More tests => 7;
 use Test::Mojo;
-use Data::Dumper;
 
 use_ok('Adminim');
 

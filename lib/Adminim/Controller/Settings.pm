@@ -1,4 +1,4 @@
-package Adminim::Controller::Help;
+package Adminim::Controller::Settings;
 
 use strict;
 use warnings;
@@ -7,11 +7,9 @@ use base 'Mojolicious::Controller';
 
 sub index {
     my $self = shift;
-    my $page = $self->param('page');
-    $self->stash(
-            page => $page,
-            menu => 'help',
-        );
+    $self->stash( menu => 'settings' );
+
+    # show user/system settings
 }
 
 1;
@@ -20,11 +18,11 @@ __END__
 
 =head1 NAME
 
-Adminim::Controller::Help - 
+Adminim::Controller::Settings - 
 
 =head1 VERSION
 
-This documentation refers to <Adminim::Controller::Help> version 0.1
+This documentation refers to <Adminim::Controller::Settings> version 0.1
 
 =head1 AUTHOR
 
@@ -32,7 +30,7 @@ This documentation refers to <Adminim::Controller::Help> version 0.1
 
 =head1 SYNOPSIS
 
-use Adminim::Controller::Help;
+use Adminim::Controller::Settings;
 
 =head1 DESCRIPTION
 

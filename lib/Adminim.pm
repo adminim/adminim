@@ -30,9 +30,13 @@ sub startup {
     $r->namespace('Adminim::Controller');
 
     # Help
-    $r->route('/')            ->via('get')->to(controller => 'help', action => 'index')->name('index');
-    $r->route('/help')        ->via('get')->to(controller => 'help', action => 'index')->name('index');
-    $r->route('/help/(*page)')->via('get')->to(controller => 'help', action => 'index')->name('index');
+    $r->route('/')            ->via('get')->to('help#index')->name('index');
+    $r->route('/help')        ->via('get')->to('help#index')->name('help_index');
+    $r->route('/help/(*page)')->via('get')->to('help#index')->name('help_index_child');
+
+    # settings
+    $r->route('/settings')->via('get')->to('settings#index')->name('settings_index');
+
 
     $r->route('/welcome')->to('example#welcome', id => 1);
 }
