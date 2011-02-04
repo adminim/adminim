@@ -17,8 +17,6 @@ sub startup {
             stash_key   => 'conf'
         } );
 
-    $ENV{MOJO_HOME} ||= $config->{home_path};
-
     $self->secret( $config->{secret} );
 
     # Plugins

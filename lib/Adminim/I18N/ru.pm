@@ -1,8 +1,18 @@
 package Adminim::I18N::ru;
 
-use Mojo::Base 'Adminim::I18N::Base';
+use Mojo::Base 'Adminim::I18N';
 
-our %Lexicon = %{ __PACKAGE__->get_lexicon() };
+use utf8;
+
+our %Lexicon = (
+    'Help'      => 'Помощь',
+    'Settings'  => 'Настройки',
+    'Show help page'        => 'Отобразить справку',
+    'Show settings page'    => 'Отобразить страницу настроек',
+    'error'     => 'ошибка',
+    'help page' => 'справочник',
+    'page not found'    => 'страница не найдена',
+);
 
 1;
 
