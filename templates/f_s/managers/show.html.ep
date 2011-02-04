@@ -1,0 +1,11 @@
+% layout 'default';
+
+<script type="text/javascript">
+    $().ready(function(){
+         $('body').layout({ applyDefaultStyles: true });
+        });
+</script>
+
+<div class="ui-layout-west"></div>
+<div class="ui-layout-center"></div> 
+

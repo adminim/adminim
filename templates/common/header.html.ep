@@ -4,7 +4,11 @@
     <input type="radio" id="menu_btn_dbm" name="radio" onclick="location.href='<%= url_for 'd_b_manager_show' %>'" />
     <label title="<%= l 'Show help page' %>" for="menu_btn_dbm"><%= l 'DB Manager' %></label>
    
-   <!-- Settings button -->
+    <!-- DBM button -->
+    <input type="radio" id="menu_btn_fs" name="radio" onclick="location.href='<%= url_for 'fs_managers_show' %>'" />
+    <label title="<%= l 'Show file manager' %>" for="menu_btn_fs"><%= l 'Files' %></label>
+
+    <!-- Settings button -->
     <input type="radio" id="menu_btn_settings" name="radio" onclick="location.href='<%= url_for 'settings_index' %>'" />
     <label title="<%= l 'Show settings page' %>" for="menu_btn_settings"><%= l 'Settings' %></label>
 

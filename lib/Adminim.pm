@@ -2,7 +2,7 @@ package Adminim;
 
 use strict;
 use warnings;
-
+use Data::Dumper;
 use base 'Mojolicious';
 
 our $VERSION = 0.1;
@@ -39,6 +39,9 @@ sub startup {
     $r->route('/dbm')->via('get')->to('d_b_manager#show')->name('d_b_manager_show');
 
     $r->route('/welcome')->to('example#welcome', id => 1);
+
+    # file manager
+    $r->route('/fs')->via('get')->to('f_s-managers#show')->name('fs_managers_show');
 }
 
 1;
