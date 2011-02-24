@@ -42,6 +42,7 @@ sub startup {
 
     # file manager
     $r->route('/fs')->via('get')->to('f_s-managers#show')->name('fs_managers_show');
+    $r->route('/fs/folders')->via('get')->to('f_s-managers#folders')->name('fs_managers_folders');
 }
 
 1;

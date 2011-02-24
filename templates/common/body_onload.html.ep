@@ -1,4 +1,5 @@
 
+var LAYOUT;
 init();
 
 function init() {
@@ -14,6 +15,6 @@ function init() {
     $(window).resize(move_menu_button);
 
     // init layout
-    $('body').layout({ applyDefaultStyles: true }).sizePane("north", 40);
+    LAYOUT = $('body').layout({ applyDefaultStyles: true }).sizePane("north", 40);
 }
  

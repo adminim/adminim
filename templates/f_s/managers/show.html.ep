@@ -1,5 +1,27 @@
 % layout 'default';
 
-<div class="ui-layout-west"></div>
+<script type="text/javascript">
+$().ready(function(){
+        $("#files_tree").jstree({
+            json_data : {
+                ajax : {
+                    url : "/fs/folders",
+                    data : function(n) {return { id : n.attr ? n.attr("id") : 0 } }
+                    }
+                },
+            themes : {
+                url : "/jstree/default/style.css"
+            },
+            plugins : [ "themes", "json_data" ]
+        });
+
+});
+
+</script>
+
+
+<div class="ui-layout-west">
+    <div id="files_tree"></div>
+</div>
 <div class="ui-layout-center"></div> 
 
