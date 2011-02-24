@@ -2,6 +2,12 @@
 
 <script type="text/javascript">
 $().ready(function(){
+
+        $("#files_tree").bind('select_node.jstree', function(e,d){
+            var path = d.rslt.obj.attr('id');
+//            console.log( path );
+            $('#button_pane button').button({ disabled : false });
+        });
         $("#files_tree").jstree({
             json_data : {
                 ajax : {
@@ -9,12 +15,14 @@ $().ready(function(){
                     data : function(n) {return { id : n.attr ? n.attr("id") : 0 } }
                     }
                 },
+            ui : { select_limit : 1 },
             themes : {
                 url : "/jstree/default/style.css"
             },
-            plugins : [ "themes", "json_data" ]
+            plugins : [ "themes", "json_data", "ui" ]
         });
 
+    $('#button_pane button').button({ disabled : true });
 });
 
 </script>
@@ -23,5 +31,11 @@ $().ready(function(){
 <div class="ui-layout-west">
     <div id="files_tree"></div>
 </div>
-<div class="ui-layout-center"></div> 
+<div class="ui-layout-center">
+    <div id="button_pane">
+        <button id="exchange_view"><%= l 'Exchange' %></button>
+        <button id="create_folder"><%= l 'Create New Folder' %></button>
+        <button id="create_file"><%= l 'Create New File' %></button>
+    </div>
+</div> 
 
