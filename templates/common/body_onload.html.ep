@@ -12,5 +12,8 @@ function init() {
     // move menu
     move_menu_button();
     $(window).resize(move_menu_button);
+
+    // init layout
+    $('body').layout({ applyDefaultStyles: true }).sizePane("north", 40);
 }
  
